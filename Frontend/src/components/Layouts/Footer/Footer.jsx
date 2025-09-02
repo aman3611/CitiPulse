@@ -30,11 +30,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <Facebook size={20} />, url: "#", label: "Facebook" },
-    { icon: <Twitter size={20} />, url: "#", label: "Twitter" },
-    { icon: <Instagram size={20} />, url: "#", label: "Instagram" },
-    { icon: <Linkedin size={20} />, url: "#", label: "LinkedIn" },
-    { icon: <Github size={20} />, url: "#", label: "GitHub" },
+    { icon: <Facebook size={20} />, url: "https://www.facebook.com/profile.php?id=100017329083360", label: "Facebook" },
+    { icon: <Twitter size={20} />, url: "https://twitter.com/yourProfile", label: "Twitter" },
+    { icon: <Instagram size={20} />, url: "https://instagram.com/yourProfile", label: "Instagram" },
+    { icon: <Linkedin size={20} />, url: "https://www.linkedin.com/in/aman-gupta-49825b326", label: "LinkedIn" },
+    { icon: <Github size={20} />, url: "https://github.com/aman3611", label: "GitHub" },
   ];
 
   return (
@@ -130,6 +130,8 @@ const Footer = () => {
               <a
                 href={item.url}
                 key={item.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-100 hover:bg-blue-100 border border-gray-200 rounded-full flex items-center justify-center text-gray-600 hover:text-blue-600 transition"
                 aria-label={item.label}
               >
@@ -165,3 +167,4 @@ const Footer = () => {
 };
 
 export default Footer;
+
