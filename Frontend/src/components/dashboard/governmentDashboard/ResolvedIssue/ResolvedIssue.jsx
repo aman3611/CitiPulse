@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
 import { useAuth } from "../../../Context/AuthContext";
-import LiveRouteToIssue from "../../../Map/LiveRoutetoIssue";
+import LiveRouteToIssue from "../../../Map/LiveRouteToIssue";
 import { ThumbsDown, ThumbsUp } from "lucide-react";
 
 const ResolvedIssue = () => {
