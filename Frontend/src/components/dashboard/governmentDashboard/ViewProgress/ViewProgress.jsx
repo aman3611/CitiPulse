@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
 import { useAuth } from "../../../Context/AuthContext";
 import { ThumbsDown, ThumbsUp } from "lucide-react";
-import LiveRouteToIssue from "../../../Map/LiveRoutetoIssue";
+import LiveRouteToIssue from "../../../Map/LiveRouteToIssue";
 
 
 const ViewProgress = () => {
