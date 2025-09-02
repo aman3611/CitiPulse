@@ -17,7 +17,7 @@ const developers = [
     avatar: "https://avatars.githubusercontent.com/u/193778631?v=4",
     portfolio: "https://aman-portfolio2505.netlify.app/",
     github: "https://github.com/aman3611",
-    linkedin: "www.linkedin.com/in/aman-gupta-49825b326",
+    linkedin: "https://www.linkedin.com/in/aman-gupta-49825b326",
     email: "amangupta3611@gmail.com",
   },
 
