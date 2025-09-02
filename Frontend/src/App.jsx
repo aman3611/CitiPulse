@@ -11,7 +11,7 @@ import Login from "./components/auth/Login/Login";
 import Home from "./components/Home/Home";
 import UserDashboard from "./components/dashboard/userDashboard/userDashboard";
 import GovernmentDashboard from "./components/dashboard/governmentDashboard/GovernmentDashboard";
-import AdminDashboard from "./components/dashboard/adminDashboard/adminDashboard";
+import AdminDashboard from "./components/dashboard/adminDashboard/AdminDashboard";
 import UserPosts from "./components/dashboard/userDashboard/UserPosts/UserPosts";
 import UserDashboardWelcome from "./components/dashboard/userDashboard/UserDashboardWelcome/UserDashboardWelcome";
 import Profile from "./components/Profile/Profile";
