@@ -117,7 +117,7 @@ const Terms = () => {
           </div>
 
           <div className="text-center mt-16 text-gray-600">
-            <p>Last updated: June 19, 2025</p>
+            <p>Last updated: September, 2025</p>
           </div>
         </div>
       </div>
