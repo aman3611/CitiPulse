@@ -46,15 +46,15 @@ const steps = [
 
 const testimonials = [
   {
-    name: "Amit Sharma",
+    name: "Ram Gupta",
     quote:
-      "CitiPulse helped fix a pothole that had been ignored for months—within days! Phenomenal.",
+      “Our neighborhood pothole had been ignored for months. Thanks to CitiPulse, it’s finally fixed — amazing response!.”,
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {
-    name: "Priya Desai",
+    name: "Priya Singh",
     quote:
-      "Finally a civic platform that works! I could track every update from authorities.",
+      “Finally, a civic platform that truly delivers! I could track every update from the authorities in real time.”,
     avatar: "https://randomuser.me/api/portraits/women/44.jpg",
   },
 ];
