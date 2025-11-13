@@ -49,13 +49,13 @@ const testimonials = [
     name: "Ram Gupta",
     quote:
       "Our neighborhood pothole had been ignored for months. Thanks to CitiPulse, it's finally fixed — amazing response!.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    avatar: "https://randomuser.me/api/portraits/men/77.jpg",
   },
   {
     name: "Priya Singh",
     quote:
       "Finally, a civic platform that truly delivers! I could track every update from the authorities in real time.",
-    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    avatar: "https://randomuser.me/api/portraits/women/57.jpg",
   },
 ];
 
