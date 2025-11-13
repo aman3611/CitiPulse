@@ -77,27 +77,46 @@ const { message } = req.body;
     },
   };
 
-  const apiReq = https.request(options, (apiRes) => {
+    const apiReq = https.request(options, (apiRes) => {
     let responseBody = "";
     apiRes.on("data", (chunk) => (responseBody += chunk));
     apiRes.on("end", () => {
       try {
         const parsed = JSON.parse(responseBody);
-        res.json({ reply: parsed.text });
-      } catch {
-        res.status(500).json({ error: "Invalid response from Cohere" });
+
+        // Try common response shapes from "chat" style APIs (Cohere, HF, others)
+        // and pick the first available text-like field.
+        const reply =
+          parsed?.message?.content ||
+          parsed?.output?.[0]?.content ||
+          parsed?.output?.[0]?.text ||
+          parsed?.generations?.[0]?.text ||
+          parsed?.choices?.[0]?.message?.content ||
+          parsed?.result?.content ||
+          parsed?.text ||
+          // fallback: try to stringify something useful (not full huge object)
+          (typeof parsed === "object" ? JSON.stringify(parsed).slice(0, 1000) : parsed);
+
+        // Log parsed response for debugging (can remove later)
+        console.log("Cohere parsed reply:", reply);
+
+        // respond to frontend with a single 'reply' field
+        return res.json({ reply });
+      } catch (err) {
+        console.error("Cohere response parsing error:", err, "raw:", responseBody);
+        return res.status(500).json({ error: "Invalid response from Cohere" });
       }
     });
   });
 
   apiReq.on("error", (err) => {
-    console.error("Error:", err);
-    res.status(500).json({ error: "Request to Cohere failed" });
+    console.error("Error calling Cohere:", err);
+    return res.status(500).json({ error: "Request to Cohere failed" });
   });
 
   apiReq.write(data);
   apiReq.end();
-});
+
 
 app.get("/", (req, res) => {
   res.send("🌐 Citipulse API is running securely!");
