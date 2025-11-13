@@ -116,6 +116,7 @@ const { message } = req.body;
 
   apiReq.write(data);
   apiReq.end();
+  });
 
 
 app.get("/", (req, res) => {
