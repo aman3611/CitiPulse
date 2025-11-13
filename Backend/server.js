@@ -45,7 +45,8 @@ app.post("/api/ask", (req, res) => {
 const { message } = req.body;
 
   const data = JSON.stringify({
-    model: "command-r-plus",
+    model: "command-a-03-2025",
+
     message: `You are CitiPulse's official assistant, trained strictly to help users understand and use the Citipulse platform.
   
   CitiPulse is a civic issue reporting platform where:
