@@ -60,6 +60,8 @@ coverage/
 frontend/coverage/
 backend/coverage/
 
+
+
 # Ignore miscellaneous
 *.log
 *.pid
